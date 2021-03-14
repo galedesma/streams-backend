@@ -31,7 +31,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 //Levanto server
-const port = 4000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`El servidor está corriendo en el puerto ${port}`);
 });
